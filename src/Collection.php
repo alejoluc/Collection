@@ -12,7 +12,7 @@ class Collection implements ArrayAccess, JsonSerializable {
 
     public function __construct($origin = null)
     {
-        if (is_array($origin)) {
+        if (is_array($origin) || $origin instanceof ArrayAccess) {
             $this->items = $origin;
         }
     }
