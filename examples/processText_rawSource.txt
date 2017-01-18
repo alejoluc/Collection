@@ -1,0 +1,8 @@
+America,Argentina,Español
+America,Chile,Español
+America,Estados Unidos,Ingles
+America,Guayana Francesa,Frances
+Europa,Inglaterra,Ingles
+Europa,Francia,Frances
+Europa,España,Español,
+Oceania,Australia,Ingles
