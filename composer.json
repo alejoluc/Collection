@@ -1,0 +1,19 @@
+{
+  "name"          : "alejoluc/collection",
+  "description"   : "Collections Implementation",
+  "version"       : "0.1.0",
+
+  "authors"   : [
+    {
+      "name"  : "Alejo Lucangeli",
+      "email" : "alejolucangeli@gmail.com"
+    }
+  ],
+
+
+  "autoload" : {
+    "psr-4": {
+      "alejoluc\\Collection\\": "src/"
+    }
+  }
+}
