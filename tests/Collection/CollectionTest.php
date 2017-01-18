@@ -446,6 +446,29 @@ class CollectionTest extends PHPUnit_Framework_TestCase {
         $this->assertEquals($expected, json_encode($col));
     }
 
+    public function testCollectionCanBeInitializedWithCollections() {
+        $col = new Collection([
+            new Collection([1,2,3]),
+            new Collection([4,5,6]),
+            new Collection([7,8,9])
+        ]);
+
+        $this->assertEquals([1,2,3], $col[0]->all());
+        $this->assertEquals([4,5,6], $col[1]->all());
+        $this->assertEquals([7,8,9], $col[2]->all());
+    }
+
+    public function testItemsCanBeAccessedLikeObjects() {
+        $col = new Collection([
+            new Collection([
+                'name' => 'John',
+                'age'  => 18
+            ])
+        ]);
+
+        $this->assertEquals('John', $col->get(0)->name);
+    }
+
 
     /**
      * @return Collection
