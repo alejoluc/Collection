@@ -364,9 +364,9 @@ class Collection implements ArrayAccess, JsonSerializable {
      * =================
      */
 
-    public function offsetExists($key) { return array_key_exists($key, $this->items); }
-    public function offsetGet($key) {    return $this->items[$key]; }
-    public function offsetUnset($key) { unset($this->items[$key]); }
+    public function offsetExists($key)  { return array_key_exists($key, $this->items);  }
+    public function offsetGet($key)     { return $this->items[$key];                    }
+    public function offsetUnset($key)   { unset($this->items[$key]);                    }
 
     public function offsetSet($key, $value) {
         if ($key === null) {
@@ -383,10 +383,10 @@ class Collection implements ArrayAccess, JsonSerializable {
      * ========================
     */
 
-    public function __isset($key) {         return array_key_exists($key, $this->items); }
-    public function __get($key){            return $this->items[$key]; }
-    public function __set($key, $value){    $this->items[$key] = $value; }
-    public function __unset($key){          unset($this->items[$key]); }
+    public function __isset($key)       { return array_key_exists($key, $this->items);  }
+    public function __get($key)         { return $this->items[$key];                    }
+    public function __set($key, $value) { $this->items[$key] = $value;                  }
+    public function __unset($key)       { unset($this->items[$key]);                    }
 
 
     /*
