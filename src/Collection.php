@@ -179,8 +179,9 @@ class Collection implements ArrayAccess, JsonSerializable {
     }
 
     /**
-     * Compares a column of all the elements of the collection against a $compareValue and returns a new Collection with the
-     * elements that satisfy the $compare condition. This is the filtering method that the filtering helpers call.
+     * Compares a column of all the elements of the collection against a $compareValue and returns a new
+     * Collection with the elements that satisfy the $compare condition. This is the filtering method that
+     * the filtering helpers call.
      * @param string $key
      * @param mixed $compareValue
      * @param string [$compare] The constraint to use. Possible values are: =, <, >, <=, >=, contains (for arrays
