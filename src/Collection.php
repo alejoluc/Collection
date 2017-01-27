@@ -214,12 +214,14 @@ class Collection implements ArrayAccess, JsonSerializable {
 
                 case 'contains':
                     if (is_string($value)) {
-                            return strpos($value, $compareValue) !== false;
+                        return strpos($value, $compareValue) !== false;
                     }
 
                     if (is_array($value)) {
                         return in_array($compareValue, $value, $strictComparison) !== false;
                     }
+
+                    return false;
                     break;
             }
         });
