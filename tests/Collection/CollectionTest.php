@@ -1,8 +1,9 @@
 <?php
 
 use \alejoluc\Collection\Collection;
+use \PHPUnit\Framework\TestCase;
 
-class CollectionTest extends PHPUnit_Framework_TestCase {
+class CollectionTest extends TestCase {
 
     /** @var  Collection */
     private $colIntegers;
